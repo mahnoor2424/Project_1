@@ -1,0 +1,434 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@500;600;700&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3rem;
+
+    /*========== Font and typography ==========*/
+    --body-font: 'Open Sans', sans-serif;
+    --title-font: 'Raleway', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+} 
+::-webkit-scrollbar-track {
+    background:white; 
+} 
+::-webkit-scrollbar-thumb {
+    background: #d51e1e; 
+} 
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: var(--body-font);
+   
+    overflow-x: hidden;
+}
+*{
+    margin: 0;
+    padding: 0;
+  
+}
+
+.main{
+    height: 20px;
+}
+
+.box{
+    padding: 10px;
+    height: 50px;
+    width: 170px;
+   background-color: #e83232;
+    position: relative;
+    top: -60px;
+    color: white;
+    box-shadow: 10px 0 15px -5px rgba(0, 0, 0, 0.01), /* Right shadow */
+                -10px 0 15px -5px rgba(0, 0, 0, 0.01); /* Left shadow */
+}
+.boxx{
+    padding: 10px;
+    height: 50px;
+    width: 170px;
+   background-color:  #da8787;
+    position: relative;
+    color: white;
+    top: -60px;
+}
+.boxxx{
+    padding: 10px;
+    height: 50px;
+    width: 170px;
+   background-color: #e83232;
+    position: relative;
+    top: -60px;
+    color: white;
+}
+
+
+
+/* Background Wrapper */
+.background-wrapper {
+    position: relative;
+    overflow: hidden; /* Ensure content does not overflow */
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(94, 84, 84, 0.3)), 
+                url('img/cover.jpg') no-repeat center center/cover;
+    filter: blur(5px);
+    z-index: -1; 
+    opacity:10; 
+   
+}
+
+/* Navbar Styles */
+.navbar {
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    width: 40%;
+    padding: 0.5rem 1rem;
+    border-bottom: 2px solid #ffffff ;
+    border-top: 2px solid #ffffff ;
+}
+
+.navbar .navbar-brand, .navbar .nav-item .nav-link{
+    color: white;
+}
+
+.navbar .nav-item .nav-link {
+    padding: 10px 15px;
+    margin: 0 5px;
+    font-size: 18px;
+    transition:  0.3s, color 0.3s;
+    color: white;
+    font-weight: 600;
+}
+.navbar .nav-link li{
+    color: white;
+}
+
+.navbar .nav-item .nav-link:hover {
+    background-color: #ff000085;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Home Section Styles */
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    filter: none;
+    
+}
+
+.home h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.home h1::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: white;
+    margin: 0.5rem auto;
+}
+
+.home h5 {
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+@media (max-width: 768px) {
+    .home h1 {
+        font-size: 2.5rem;
+    }
+    .home h5 {
+        font-size: 1.2rem;
+    }
+}
+/* General Styles */
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.about {
+    padding: 2rem 0;
+    text-align: center;
+    background-color: #e83232;
+    border-top: 2px solid white;
+}
+
+.about_cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.card {
+    width: 250px;
+    background: none;
+    padding: 1rem;
+    text-align: center;
+    border: none; /* No border by default */
+    transition: all 0.3s ease; /* Smooth transition for all changes */
+   
+}
+
+.card:hover {
+    background-color: #af1f1fa0; /* Dark red background */
+    color: white; /* White text */
+    transform: translateY(-10px); /* Lift the card slightly */
+    border: 2px solid white; /* White border on hover */
+}
+
+.card:hover .card-title, .card:hover .card-text {
+    color: white; /* Ensure text color changes to white */
+}
+
+.pic {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 1rem;
+    background-color: white; /* White background */
+    border-radius: 50%; /* 50% border radius */
+    padding: 10px; /* Padding to center the icon inside the circle */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+
+    fill: red; 
+    color: red; /* Default red color for PNG/JPG icons */
+}
+
+.card-img-top:hover {
+    box-shadow: 0 0 0 2px white; /* White border on hover */
+}
+
+.card-body {
+    padding: 0;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.card-text {
+    font-size: 0.875rem;
+    color: #ffffff;
+    transition: color 0.3s ease; /* Smooth transition for text color */
+    text-shadow: 3px;
+}
+.ssh {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the shadow container */
+    margin-top: 1rem; /* Add some space above the shadow */
+}
+
+.sh {
+    width: 50%;
+    height: 0.5rem; /* Height of the shadow */
+    background-color: rgba(63, 62, 62, 0.137); /* Semi-transparent black */
+    border-radius: 80%; /* 80% border radius for rounded ends */
+  
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+}
+
+/* Additional Styles for SVG Icons */
+.card img.card-img-top {
+    filter: invert(2%) sepia(0%) saturate(6%) hue-rotate(358deg) brightness(100%) contrast(100%); 
+    color: #8B0000;
+}
+
+
+
+/*  */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.portfolio {
+    padding: 2rem 0;
+    background-color:   #da8787;
+    border-top: 3px solid white;
+}
+
+.port_cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.col-md-4 {
+    flex: 1 1 30%; /* Flex-grow, flex-shrink, flex-basis */
+}
+
+.cards {
+    width: 100%;
+    border-bottom: 3px solid black;
+    max-width: 290px;
+    background: white;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+.cards:hover {
+    transform: translateY(-10px); /* Lift the card slightly on hover */
+}
+
+.cards-img-top {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 250px; /* Max width for the image */
+    max-height: 200px; /* Max height for the image */
+    margin: 0 auto 1rem; /* Center image and add bottom margin */
+}
+
+.cards-body {
+    padding: 0;
+}
+
+.tit .card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #971818; /* Darker text color for visibility */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .col-md-4 {
+        flex: 1 1 100%; /* Full width for each card on small screens */
+    }
+
+    .cards {
+        max-width: 90%; /* Reduce max width on small screens */
+    }
+
+    .card-img-top {
+        max-width: 90%; /* Reduce image max width on small screens */
+    }
+
+    .tit .card-title {
+        font-size: 0.875rem; /* Smaller font size for card titles on smaller screens */
+    }
+}
+.Abouts{
+    background-color: rgba(128, 128, 128, 0.246);
+    border-top: 3px solid white;
+}
+.Abt_t::after {
+    content: "";
+    display: block;
+    width: 80%;
+    border-top: 2px solid white;
+    margin: 0.5rem auto;
+}
+.blog{
+    background-color: #e83232;
+           padding: 2rem 0;
+        border-top: 3px solid white;
+    
+}
+/*  */
+
+/* Adjustments for responsiveness */
+@media (max-width: 768px) {
+    .col-md-6,
+    .col-lg-4,
+    .col-lg-2 {
+        flex: 0 0 100%; /* Full width on smaller screens */
+        max-width: 100%; /* Full width on smaller screens */
+        margin-bottom: 1rem; /* Add bottom margin between columns */
+    }
+}
+
+
+.con_se{
+    content: "";
+    display: block;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    width: 80%;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+    margin:2.15rem auto;
+}
+.con_se{
+    padding: 2px 3px;
+}
+  .contact{
+    background-color: rgba(126, 30, 30, 0.949);
+    border-top: 3px solid white;
+  }
+  .social_icon, .vv{
+    content: "";
+    display: block;
+    width: 80%;
+    margin: 0.5rem auto;
+  }
+  .vv{
+    color: rgb(0, 0, 0);
+  }
+
+
+
+
+
+
